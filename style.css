@@ -1,0 +1,679 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Bai+Jamjuree:wght@400;600&family=Barlow:wght@400;600&family=Big+Shoulders+Display:wght@700&family=Commissioner:wght@400;500;700&family=Fraunces:wght@700;900&family=Inter:wght@300;400;500;700&family=Josefin+Sans:wght@300&family=Karla:wght@400;700&family=Kumbh+Sans:wght@400;700&family=Lexend+Deca&family=Manrope:wght@500;600;700&family=Open+Sans:wght@400;700&family=Outfit:wght@400;700;800&family=Overpass:wght@300;600&family=Poppins:wght@400;600;700&family=Raleway:wght@400;700&family=Red+Hat+Display:wght@500;700;900&family=Space+Mono:wght@700&family=Ubuntu:wght@400;500;700&display=swap');
+
+:root{
+    --primary-color:lightblue;
+    --secondary-color:lightgray;
+    --others:green;
+    --text:black;
+    --white:#fff;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgba(126, 189, 247, 0.082);
+    padding:20px 0;
+    font-family: "poppins", sans-serif;
+}
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    margin:10px 0 20px;
+}
+
+.container article img{
+    width:40%;
+    margin:20px 0;
+}
+
+.container article .ist{
+    font-size:18px;
+    color: var(--text);
+    text-align: left;
+    line-height: 2.3rem;
+    margin:10px 0px 20px 12px;
+    width:300px;
+}
+
+p{
+    font-family: "poppins", sans-serif;
+}
+
+.container section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: var(--white);
+    padding:5px 20px 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.226);
+    margin:5px 0 20px;
+    position: relative;
+}
+
+#red{
+    position: absolute;
+    top:25px;
+    color:red;
+    right:30px;
+    visibility:hidden ;
+}
+
+input{
+    width:100%;
+    margin:10px 0 5px;
+    height:40px;
+    outline: none;
+    border:1px solid var(--secondary-color);
+    border-radius: 3px;
+    padding:10px 15px;
+}
+
+input::placeholder{
+    font-size:14px;
+}
+
+.red{
+    color:red;
+    font-size: 10px;
+    text-align: left;
+    display: none;
+}
+
+.red a{
+    font-size: 10px;
+    color:red;
+    margin:0;
+}
+
+button{
+    width:100%;
+    height:40px;
+    margin:10px 0;
+    background-color: rgb(44, 88, 231);
+    color:var(--white);
+    border-radius:3px;
+    border:none;
+    outline: none;
+    font-size:16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.btn2{
+    background-color: var(--others);
+    padding:15px;
+    text-transform: capitalize;
+    height: auto;
+    width:auto;
+}
+
+.forgotten{
+    text-decoration: none;
+    color:rgb(44, 88, 231);
+    margin:5px 0 10px;
+    font-size:16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+hr{
+    width:100%;
+    margin:10px 0;
+}
+
+p{
+    font-size: 12px;
+    width:100%;
+    text-align: center;
+}
+
+p b{
+    font-weight: 900;
+}
+
+p b a{
+    text-decoration: none;
+    cursor: pointer;
+    color:#000;
+}
+
+.create-container{
+    position: absolute;
+    top:0;
+    width:100%;
+    height:130vh;
+    margin-bottom: 30px;
+    display: none;
+    background-color: rgba(255, 255, 255, 0.726);
+}
+
+.create-container article{
+    /* text-align: center; */
+    margin:10px;
+    background-color: rgb(252, 252, 252);
+    /* border:2px solid black; */
+    border-radius: 15px;
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.26);
+    padding:10px 0 5px;
+}
+
+.create-container article header{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    text-align: left;
+    flex-direction: row;
+    padding:0px 15px;
+    /* border:2px solid black; */
+}
+
+.create-container article header i{
+    font-size:23px;
+    cursor: pointer;
+}
+
+.form{
+    padding:0px 20px;
+    text-align: center;
+}
+
+.form label{
+    position: relative;
+}
+
+.form input{
+    width:100%;
+    height:41px;
+    margin:7px 0px;
+    background-color: rgba(128, 128, 128, 0.082);
+    border:1px solid gray;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+.form input::placeholder{
+    font-size: 15px;
+}
+
+.form input#email,
+.form input#password{
+    width:100%;
+}
+
+.form label i{
+    position: absolute;
+    right:20px;
+    top:0px;
+    color: darkred;
+    font-size:20px;
+}
+
+#exclamation{
+    left:69vw;
+    top:0px;
+    right:0px;
+    display: none;
+}
+
+.form .fa-circle-exclamation{
+    color: darkred;
+    font-size:20px;
+    position: absolute;
+    right: 20px;
+    display: none;
+}
+
+.dob{
+    width:100%;
+    margin:5px  0 0 0px; 
+    /* border:2px solid black; */
+}
+
+.fa-question{
+    background-color: rgba(0, 0, 0, 0.493);
+    padding:2px 4px;
+    color: #fff;
+    border-radius: 100px;
+    margin:0 0 0 5px;
+}
+
+.dob nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border:2px solid black; */;
+    position: relative;
+    width:100%;
+    padding:5px 0;
+} 
+
+.dob nav p{
+    margin:0;
+    padding: 0;
+    width:40%;
+}
+
+
+.form select{
+    height: 40px;
+    width:26%;
+    font-size: 14px;
+    background-color: rgba(211, 211, 211, 0.185);
+    border-radius:3px;
+    padding:5px;
+}
+
+.form select#months{
+    margin:0 15px;
+}
+
+.form .gender nav{
+    display: flex;
+    justify-content: space-between;
+   align-items: center;
+    /* border:2px solid black; */
+    margin:5px 0;
+    padding:5px 0;
+    position: relative;
+}
+
+.form .gender p{
+    width:30%;
+}
+
+
+
+.form .check{
+    border:none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.form .check label{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width:32%;
+    height: 40px;
+    border:1px solid lightgray;
+    border-radius: 5px; 
+    position: relative;
+    margin:5px 10px 5px 7px;
+    padding:10px 5px;
+}
+
+.form .check label p{
+    font-size:12px;
+    margin:0 0px
+}
+
+.form .check label input{
+    width:15%;
+     border-radius: 100%;
+}
+
+.form  .call{
+    display:none;
+    position: relative;
+    width:100%; 
+    /* border:2px solid black; */
+    top:0;
+    left:0;
+    
+}
+
+ .form .call input,
+.form .call select{
+    width:96%;
+    margin:5px 10px;
+    font-size: 15px;
+}
+
+.form .gender .call p{
+    width:100%;
+    text-align: left;
+    padding: 0;
+    margin: 5px 10px; 
+    /* border:2px solid black; */
+}
+
+.form .engagement{
+    font-size: 10px;
+    margin:10px 0;
+}
+
+.sign-up{
+    width:30%;  
+    margin-top:10px;
+    background-color: var(--others);
+    cursor: pointer;
+}
+
+@media screen and (min-width:375px) {
+    #exclamation{
+        left:73vw;
+    }
+}
+
+@media screen and (min-width:405px) {
+    #exclamation{
+        left:76vw;
+    }
+}
+
+@media screen and (min-width:600px){
+    .container{
+        margin:20px 20%;
+    }
+
+    .create-container article{
+        margin:30px 20%;
+    }
+
+    #exclamation{
+        left:50vw;
+    }
+    
+    .form select{
+        width:30%;
+        font-size: 15px;
+    }
+
+    .dob nav p{
+        width:29%;
+        font-size: 15px;
+    }
+
+    .form .gender p{
+        width:20%;
+        font-size: 15px;
+    }
+
+    .form .check label{
+        width:50%;
+        margin:5px 10px 5px 7px; 
+    }
+}
+
+@media screen and (min-width:1000px) {
+    .dob nav p{
+        width:20%;
+    }    
+
+    #exclamation{
+        left:52vw;
+    }
+
+    .form select{
+        width:31%;
+    }
+
+    .form .gender p{
+        width:16%;
+    }
+}
+
+@media screen and (min-width:1200px) {
+    .container{
+        display: flex;
+        justify-content: center;
+        /* align-items: center; */
+        flex-direction:row;
+        position: relative;
+        margin: auto;
+    }
+
+    .container article:first-child{
+        /* padding:300px 0;
+        height:700px; */
+        /* border:2px solid black; */
+        margin:10px 50px 0 0;
+    }
+
+    .container article:first-child p{
+        width:530px;
+        font-size:25px;
+    }
+
+    .container article:last-child{
+        margin:50px 0 0;
+        width:30%;
+    }
+
+    .container article .red{
+        font-size:12px;
+    }
+
+    .container article .red a{
+        font-size:12px;
+    }
+
+    .create-container{
+        position: absolute;
+        top:0;
+        width:100%;
+        height:120vh;
+        background-color: rgba(255, 255, 255, 0.726);
+    }
+    
+    .create-container article{
+        /* text-align: center; */
+        margin:70px 31%;
+        background-color: rgb(252, 252, 252);
+        /* border:2px solid black; */
+        border-radius: 15px;
+        box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.26);
+        padding:20px 0 10px;
+    }
+    
+    .create-container article header{
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        text-align: left;
+        flex-direction: row;
+        padding:0px 34px;
+        /* border:2px solid black; */
+    }
+    
+    .create-container article header i{
+        font-size:23px;
+        cursor: pointer;
+    }
+    
+    .form{
+        padding:0px 20px;
+        text-align: center;
+    }
+    
+    .form label{
+        position: relative;
+    }
+    
+    .form input{
+        width:46%;
+        height:41px;
+        margin:7px 5px;
+        background-color: rgba(128, 128, 128, 0.082);
+        border:1px solid gray;
+        border-radius: 5px;
+        font-size: 15px;
+    }
+    
+    .form input::placeholder{
+        font-size: 15px;
+    }
+
+    .form input#password{
+        width:95%;
+    }
+
+    .form .email{
+        width:95%;
+    }
+    
+    .form label i{
+        position: absolute;
+        right:20px;
+        top:0px;
+        color: darkred;
+        font-size:20px;
+    }
+    
+    .form .fa-solid{
+        color: darkred;
+        font-size:20px;
+        position: absolute;
+    }
+
+    #exclamation{
+        left:auto;
+        right:20px;
+    }
+    
+    .dob{
+        width:100%;
+        margin:5px  0 0 5px;
+        /* border:2px solid black; */
+    }
+    
+    .fa-question{
+        background-color: rgba(0, 0, 0, 0.493);
+        padding:2px 4px;
+        color: #fff;
+        border-radius: 100px;
+        margin:0 0 0 5px;
+    }
+    
+    .dob nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        /* border:2px solid black; */;
+        position: relative;
+        width:100%;
+        /* border:2px solid black; */
+    } 
+    
+    .dob nav p{
+        margin:0;
+        padding: 0;
+        width:25%;
+    }
+    
+    .dob nav .fa-solid{
+        right: 34px;
+        position: absolute;
+        /* border:2px solid black; */
+    }
+    
+    
+    .form select{
+        height: 40px;
+        width:28%;
+        font-size: 18px;
+        margin:5px 10px 5px 6px;
+        background-color: rgba(211, 211, 211, 0.185);
+        border-radius:3px;
+        padding:5px;
+    }
+    
+    .form select#months{
+        margin:0 15px;
+    }
+    
+    .form .gender nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        /* border:2px solid black; */
+        margin:5px 0;
+        position: relative;
+    }
+    
+    .form .gender p{
+        width:19%;
+    }
+    
+    .form .gender .fa-solid{
+        right: 30px;
+    }
+    
+    .form .check{
+        border:none;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+    
+    .form .check label{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width:30%;
+        height: 40px;
+        border:1px solid lightgray;
+        border-radius: 5px; 
+        position: relative;
+        margin:5px 10px 5px 7px;
+        padding:10px;
+    }
+    
+    .form label p{
+        font-size:20px;
+    }
+    
+    .form .check label input{
+        width:15%;
+         border-radius: 100%;
+    }
+
+    .form .check label p{
+        font-size: 17px;
+    }
+    
+    .form  .call{
+        position: relative;
+        width:100%;
+        /* border:2px solid black; */
+        top:0;
+        left:0;
+        
+    }
+    
+    .form .call input,
+    .form .call select{
+        width:96%;
+        margin:5px 10px;
+        font-size: 15px;
+    }
+    
+    .form .gender .call p{
+        width:100%;
+        text-align: left;
+        padding: 0;
+        margin: 5px 10px;
+        /* border:2px solid black; */
+    }
+    
+    button.sign-up{
+        width:30%;  
+        margin-top:10px;
+        background-color: var(--others);
+        cursor: pointer;
+    }
+    
+}
